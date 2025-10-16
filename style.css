@@ -71,7 +71,7 @@ nav {
   font-size: 30px;
   font-weight: bold;
   color: transparent; /* interior transparente */
-  -webkit-text-stroke: 0.5px white; /* espessura e cor do contorno (Chrome, Safari) */
+  -webkit-text-stroke: 1px white; /* espessura e cor do contorno (Chrome, Safari) */
   text-stroke: 1px #000; /* tentativa padrão (pouco suportada) */
   text-align: center;
 }
@@ -112,6 +112,7 @@ nav {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
+
   p{
   color: white;
   font-family: "PT Sans", Arial, Helvetica, sans-serif;
@@ -215,5 +216,15 @@ nav {
 
   .mobile-tools{
     display: none;
+  }
+
+  .titulo-outline {
+    font-size: 96px;
+  }
+
+  .container-initial{
+    p{
+      font-size: 48px;
+    }
   }
 }
