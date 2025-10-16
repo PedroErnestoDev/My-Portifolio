@@ -44,6 +44,7 @@ body {
   background-color: #1d1d1f;
 }
 
+
 nav {
   background-color: #28282a;
   width: 100%;
@@ -54,24 +55,25 @@ nav {
   font-family: "Anek Devanagari", Arial, Helvetica, sans-serif;
   font-size: 24px;
   column-gap: 90px;
-
+  
   ul{
     display: flex;
     list-style: none;
     flex-direction: row;
     column-gap: 90px;
-
+    
     li{
       color: white;
     }
   }
 }
 .titulo-outline {
-  font-size: 96px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: bold;
   color: transparent; /* interior transparente */
-  -webkit-text-stroke: 2px white; /* espessura e cor do contorno (Chrome, Safari) */
-  text-stroke: 2px #000; /* tentativa padrão (pouco suportada) */
+  -webkit-text-stroke: 0.5px white; /* espessura e cor do contorno (Chrome, Safari) */
+  text-stroke: 1px #000; /* tentativa padrão (pouco suportada) */
+  text-align: center;
 }
 
 .mobile-tools{
@@ -84,26 +86,37 @@ nav {
   background-color: #28282a;
   width: 100%;
   padding: 15px;
-
+  
   select{
     height: 30px;
     width: 150px;
-
+    
     border-radius: 5px;
   }
-
+  
   ul{
     display: flex;
     list-style: none;
     flex-direction: column;
     row-gap: 20px;
     width: 100%;
-
-
+    
+    
     li{
       color: white;
     }
   }
+}
+.container-initial{
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  p{
+  color: white;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  text-align: center;
+}
 }
 
 .container-hamburguer{
@@ -116,17 +129,16 @@ nav {
   right: 15px;
 }
 
+.container-hamburguer:hover{
+  scale: 1.03;
+}
+
 .slices{
   height: 8px;
   width: 50px;
   background-color: rgb(131, 123, 123);
   border-radius: 10px;
   transition: 0.3s ease;
-}
-
-.slices:hover{
-  scale: 1.03;
-  background-color: white;
 }
 
 .title-name-nav{
