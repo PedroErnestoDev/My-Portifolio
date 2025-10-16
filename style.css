@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Ultra&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ultra&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+select{
+    height: 40px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+  }
+
+body {
+  background-color: #1d1d1f;
+}
+
+nav {
+  background-color: #28282a;
+  width: 100%;
+  height: 148px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Anek Devanagari", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  column-gap: 90px;
+
+  ul{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    column-gap: 90px;
+
+    li{
+      color: white;
+    }
+  }
+}
+.titulo-outline {
+  font-size: 96px;
+  font-weight: 700;
+  color: transparent; /* interior transparente */
+  -webkit-text-stroke: 2px white; /* espessura e cor do contorno (Chrome, Safari) */
+  text-stroke: 2px #000; /* tentativa padrão (pouco suportada) */
+}
+
+.mobile-tools{
+  display: none;
+  height: 25vh;
+  align-items: center;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background-color: #28282a;
+  width: 100%;
+  padding: 15px;
+
+  select{
+    height: 30px;
+    width: 150px;
+
+    border-radius: 5px;
+  }
+
+  ul{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 100%;
+
+
+    li{
+      color: white;
+    }
+  }
+}
+
+.container-hamburguer{
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  display: none;
+  position: absolute;
+  top: 22px;
+  right: 15px;
+}
+
+.slices{
+  height: 8px;
+  width: 50px;
+  background-color: rgb(131, 123, 123);
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.slices:hover{
+  scale: 1.03;
+  background-color: white;
+}
+
+.title-name-nav{
+  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.language-select {
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+/* Mostra a bandeira como emoji antes do texto */
+.language-select option::before {
+  content: attr(data-flag) " ";
+}
+
+
+/* 1. Telas pequenas (celulares) */
+@media (max-width: 600px) {
+    nav {
+    background-color: #28282a;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 10vh;
+    padding: 15px;
+
+    ul {
+        display: flex;
+        column-gap: 20px;
+        flex-direction: row;
+
+        li {
+            list-style: none;
+        }
+    }
+
+    .title-name-nav{
+      font-size: 20px;
+    }
+}
+
+  .menu-mobile{
+
+  }
+
+  .container-hamburguer{
+    display: flex;
+  }
+
+  .menu-pc{
+    display: none;
+  }
+}
+
+/* 2. Telas médias (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+}
+
+/* 3. Telas grandes (desktop) */
+@media (min-width: 1025px) {
+  .menu-pc{
+    display: flex;
+  }
+
+  .mobile-tools{
+    display: none;
+  }
+}
