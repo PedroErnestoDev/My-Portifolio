@@ -10,3 +10,15 @@ menu.addEventListener('click', () => {
     menuItens.style.display = "none";
   }
 });
+
+const dicionary = {
+  "pt":{
+    "about-frase": "Oi"
+  },
+
+  "en":{
+    "about-frase": "Hi"
+  }
+}
+
+console.log(dicionary.pt["about-frase"])
